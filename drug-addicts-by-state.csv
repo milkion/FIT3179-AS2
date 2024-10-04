@@ -1,0 +1,353 @@
+Year,State,Value
+2000,Johor,3506
+2000,Kedah,1716
+2000,Kelantan,2740
+2000,Melaka,851
+2000,Negeri Sembilan,1359
+2000,Pahang,1881
+2000,Perak,2669
+2000,Perlis,128
+2000,Pulau Pinang,5731
+2000,Sabah,1752
+2000,Sarawak,305
+2000,Selangor,3461
+2000,Terengganu,951
+2000,W.P. Kuala Lumpur,3475
+2000,W.P. Labuan,68
+2000,W.P. Putrajaya,0
+2001,Johor,2470
+2001,Kedah,1747
+2001,Kelantan,2699
+2001,Melaka,678
+2001,Negeri Sembilan,1704
+2001,Pahang,1665
+2001,Perak,3348
+2001,Perlis,192
+2001,Pulau Pinang,6201
+2001,Sabah,2213
+2001,Sarawak,234
+2001,Selangor,3908
+2001,Terengganu,1791
+2001,W.P. Kuala Lumpur,2619
+2001,W.P. Labuan,87
+2001,W.P. Putrajaya,0
+2002,Johor,2462
+2002,Kedah,3965
+2002,Kelantan,2825
+2002,Melaka,524
+2002,Negeri Sembilan,1195
+2002,Pahang,1414
+2002,Perak,2943
+2002,Perlis,405
+2002,Pulau Pinang,6214
+2002,Sabah,2045
+2002,Sarawak,306
+2002,Selangor,3698
+2002,Terengganu,1059
+2002,W.P. Kuala Lumpur,2680
+2002,W.P. Labuan,158
+2002,W.P. Putrajaya,0
+2003,Johor,2237
+2003,Kedah,4593
+2003,Kelantan,3625
+2003,Melaka,393
+2003,Negeri Sembilan,1034
+2003,Pahang,1695
+2003,Perak,2845
+2003,Perlis,511
+2003,Pulau Pinang,6685
+2003,Sabah,2393
+2003,Sarawak,569
+2003,Selangor,3509
+2003,Terengganu,724
+2003,W.P. Kuala Lumpur,6073
+2003,W.P. Labuan,110
+2003,W.P. Putrajaya,0
+2004,Johor,4094
+2004,Kedah,3444
+2004,Kelantan,3516
+2004,Melaka,791
+2004,Negeri Sembilan,923
+2004,Pahang,1283
+2004,Perak,2705
+2004,Perlis,447
+2004,Pulau Pinang,5976
+2004,Sabah,5367
+2004,Sarawak,374
+2004,Selangor,3090
+2004,Terengganu,706
+2004,W.P. Kuala Lumpur,5852
+2004,W.P. Labuan,104
+2004,W.P. Putrajaya,0
+2005,Johor,3910
+2005,Kedah,2606
+2005,Kelantan,2514
+2005,Melaka,650
+2005,Negeri Sembilan,760
+2005,Pahang,1663
+2005,Perak,3340
+2005,Perlis,318
+2005,Pulau Pinang,6403
+2005,Sabah,2134
+2005,Sarawak,669
+2005,Selangor,2562
+2005,Terengganu,356
+2005,W.P. Kuala Lumpur,4906
+2005,W.P. Labuan,17
+2005,W.P. Putrajaya,0
+2006,Johor,2329
+2006,Kedah,2634
+2006,Kelantan,2243
+2006,Melaka,619
+2006,Negeri Sembilan,624
+2006,Pahang,768
+2006,Perak,2545
+2006,Perlis,289
+2006,Pulau Pinang,5127
+2006,Sabah,846
+2006,Sarawak,712
+2006,Selangor,1836
+2006,Terengganu,202
+2006,W.P. Kuala Lumpur,2017
+2006,W.P. Labuan,20
+2006,W.P. Putrajaya,0
+2007,Johor,2004
+2007,Kedah,1604
+2007,Kelantan,884
+2007,Melaka,313
+2007,Negeri Sembilan,826
+2007,Pahang,378
+2007,Perak,1194
+2007,Perlis,147
+2007,Pulau Pinang,3433
+2007,Sabah,217
+2007,Sarawak,184
+2007,Selangor,1409
+2007,Terengganu,127
+2007,W.P. Kuala Lumpur,1756
+2007,W.P. Labuan,6
+2007,W.P. Putrajaya,7
+2008,Johor,1512
+2008,Kedah,1749
+2008,Kelantan,672
+2008,Melaka,367
+2008,Negeri Sembilan,602
+2008,Pahang,361
+2008,Perak,1598
+2008,Perlis,171
+2008,Pulau Pinang,1622
+2008,Sabah,119
+2008,Sarawak,51
+2008,Selangor,1176
+2008,Terengganu,490
+2008,W.P. Kuala Lumpur,1828
+2008,W.P. Labuan,19
+2008,W.P. Putrajaya,15
+2009,Johor,1633
+2009,Kedah,2016
+2009,Kelantan,1902
+2009,Melaka,327
+2009,Negeri Sembilan,919
+2009,Pahang,1064
+2009,Perak,1121
+2009,Perlis,302
+2009,Pulau Pinang,2255
+2009,Sabah,99
+2009,Sarawak,76
+2009,Selangor,1864
+2009,Terengganu,481
+2009,W.P. Kuala Lumpur,1635
+2009,W.P. Labuan,21
+2009,W.P. Putrajaya,21
+2010,Johor,2091
+2010,Kedah,2507
+2010,Kelantan,2360
+2010,Melaka,176
+2010,Negeri Sembilan,921
+2010,Pahang,1198
+2010,Perak,2296
+2010,Perlis,354
+2010,Pulau Pinang,3753
+2010,Sabah,517
+2010,Sarawak,145
+2010,Selangor,3548
+2010,Terengganu,2377
+2010,W.P. Kuala Lumpur,1344
+2010,W.P. Labuan,10
+2010,W.P. Putrajaya,45
+2011,Johor,1187
+2011,Kedah,1386
+2011,Kelantan,388
+2011,Melaka,394
+2011,Negeri Sembilan,586
+2011,Pahang,701
+2011,Perak,1964
+2011,Perlis,105
+2011,Pulau Pinang,1743
+2011,Sabah,73
+2011,Sarawak,267
+2011,Selangor,1431
+2011,Terengganu,187
+2011,W.P. Kuala Lumpur,767
+2011,W.P. Labuan,3
+2011,W.P. Putrajaya,12
+2012,Johor,1003
+2012,Kedah,1139
+2012,Kelantan,89
+2012,Melaka,287
+2012,Negeri Sembilan,622
+2012,Pahang,718
+2012,Perak,1362
+2012,Perlis,104
+2012,Pulau Pinang,1230
+2012,Sabah,14
+2012,Sarawak,213
+2012,Selangor,1185
+2012,Terengganu,71
+2012,W.P. Kuala Lumpur,965
+2012,W.P. Labuan,1
+2012,W.P. Putrajaya,12
+2013,Johor,1874
+2013,Kedah,2702
+2013,Kelantan,895
+2013,Melaka,675
+2013,Negeri Sembilan,1008
+2013,Pahang,1621
+2013,Perak,2789
+2013,Perlis,374
+2013,Pulau Pinang,3043
+2013,Sabah,513
+2013,Sarawak,650
+2013,Selangor,2226
+2013,Terengganu,641
+2013,W.P. Kuala Lumpur,1841
+2013,W.P. Labuan,15
+2013,W.P. Putrajaya,20
+2014,Johor,1992
+2014,Kedah,2535
+2014,Kelantan,1399
+2014,Melaka,845
+2014,Negeri Sembilan,951
+2014,Pahang,1903
+2014,Perak,2716
+2014,Perlis,499
+2014,Pulau Pinang,2780
+2014,Sabah,940
+2014,Sarawak,854
+2014,Selangor,2051
+2014,Terengganu,579
+2014,W.P. Kuala Lumpur,1698
+2014,W.P. Labuan,19
+2014,W.P. Putrajaya,16
+2015,Johor,2541
+2015,Kedah,2945
+2015,Kelantan,1994
+2015,Melaka,944
+2015,Negeri Sembilan,1050
+2015,Pahang,2066
+2015,Perak,3106
+2015,Perlis,781
+2015,Pulau Pinang,4280
+2015,Sabah,898
+2015,Sarawak,658
+2015,Selangor,2987
+2015,Terengganu,1022
+2015,W.P. Kuala Lumpur,1328
+2015,W.P. Labuan,36
+2015,W.P. Putrajaya,32
+2016,Johor,2565
+2016,Kedah,3862
+2016,Kelantan,3233
+2016,Melaka,930
+2016,Negeri Sembilan,1172
+2016,Pahang,2419
+2016,Perak,2639
+2016,Perlis,692
+2016,Pulau Pinang,5081
+2016,Sabah,1044
+2016,Sarawak,534
+2016,Selangor,3176
+2016,Terengganu,1676
+2016,W.P. Kuala Lumpur,1695
+2016,W.P. Labuan,79
+2016,W.P. Putrajaya,47
+2017,Johor,2108
+2017,Kedah,2655
+2017,Kelantan,3700
+2017,Melaka,613
+2017,Negeri Sembilan,1012
+2017,Pahang,2088
+2017,Perak,1557
+2017,Perlis,654
+2017,Pulau Pinang,3844
+2017,Sabah,1047
+2017,Sarawak,440
+2017,Selangor,2375
+2017,Terengganu,2044
+2017,W.P. Kuala Lumpur,1655
+2017,W.P. Labuan,92
+2017,W.P. Putrajaya,38
+2018,Johor,2352
+2018,Kedah,2693
+2018,Kelantan,4153
+2018,Melaka,736
+2018,Negeri Sembilan,1374
+2018,Pahang,1749
+2018,Perak,1820
+2018,Perlis,582
+2018,Pulau Pinang,2303
+2018,Sabah,1200
+2018,Sarawak,693
+2018,Selangor,2228
+2018,Terengganu,2057
+2018,W.P. Kuala Lumpur,1223
+2018,W.P. Labuan,72
+2018,W.P. Putrajaya,32
+2019,Johor,2371
+2019,Kedah,3582
+2019,Kelantan,2998
+2019,Melaka,819
+2019,Negeri Sembilan,1244
+2019,Pahang,1672
+2019,Perak,2046
+2019,Perlis,316
+2019,Pulau Pinang,2893
+2019,Sabah,1574
+2019,Sarawak,852
+2019,Selangor,2385
+2019,Terengganu,2123
+2019,W.P. Kuala Lumpur,1023
+2019,W.P. Labuan,139
+2019,W.P. Putrajaya,43
+2020,Johor,2564
+2020,Kedah,2372
+2020,Kelantan,2271
+2020,Melaka,829
+2020,Negeri Sembilan,812
+2020,Pahang,1395
+2020,Perak,1821
+2020,Perlis,281
+2020,Pulau Pinang,1727
+2020,Sabah,834
+2020,Sarawak,634
+2020,Selangor,1712
+2020,Terengganu,2240
+2020,W.P. Kuala Lumpur,1024
+2020,W.P. Labuan,90
+2020,W.P. Putrajaya,37
+2021,Johor,2081
+2021,Kedah,2196
+2021,Kelantan,2167
+2021,Melaka,539
+2021,Negeri Sembilan,709
+2021,Pahang,977
+2021,Perak,1637
+2021,Perlis,213
+2021,Pulau Pinang,1358
+2021,Sabah,644
+2021,Sarawak,712
+2021,Selangor,1963
+2021,Terengganu,2033
+2021,W.P. Kuala Lumpur,857
+2021,W.P. Labuan,48 
+2021,W.P. Putrajaya,71 

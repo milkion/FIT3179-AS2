@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of Addicts by Drug Type in 2021",
+  "width": 800,
+  "height": 500,
+  "data": {
+    "url": "drug-type.csv"
+  },
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2021,
+      "bind": {
+        "input": "select",
+        "options": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+        "labels": ["2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
+        "name": "Select Year"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year == year_select"},
+    {"filter": "datum.Value != '-'"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Type of drug",
+      "type": "nominal",
+      "title": "Drug Type",
+      "sort": "-y",
+      "axis": {"labelAngle": -45}
+    },
+    "y": {
+        "field": "Value",
+        "type": "quantitative",
+        "title": "Number of Addicts (Square Root Scale)",
+        "scale": {"type": "sqrt"},
+        "axis": {"tickCount": 5}
+      },
+    "tooltip": [
+      {"field": "Type of drug", "type": "nominal"},
+      {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Malaysia Population by Ethnicity (2021)",
+    "data": {
+      "url": "population.csv"
+    },
+    "transform": [
+      {"filter": "datum.date == '2021-01-01' && datum.sex == 'both' && datum.age == 'overall'"},
+      {"filter": "datum.ethnicity != 'overall'"}
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "ethnicity",
+        "type": "nominal",
+        "title": "Ethnicity",
+        "sort": "-y"
+      },
+      "y": {
+        "field": "population",
+        "type": "quantitative",
+        "title": "Population"
+      },
+      "color": {
+        "field": "ethnicity",
+        "type": "nominal",
+        "legend": null
+      },
+      "tooltip": [
+        {"field": "ethnicity", "type": "nominal", "title": "Ethnicity"},
+        {"field": "population", "type": "quantitative", "title": "Population", "format": ",.0f"}
+      ]
+    },
+    "width": 500,
+    "height": 300
+  }
