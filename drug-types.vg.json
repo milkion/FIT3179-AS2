@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of Addicts by Drug Type in 2021",
+  "title": "Number of Addicts by Drug Type",
   "width": 800,
   "height": 500,
   "data": {
