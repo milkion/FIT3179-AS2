@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "title": "Drug Addicts per 100,000 Population by State in Malaysia",
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2021,
+        "step": 1,
+        "name": "Select Year: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equalEarth",
+    "scale": 2000,  
+    "center": [110, 4.2]
+  },
+  "data": {
+    "url": "/AS2/data/combined_drug_addicts_population.csv"
+  },
+  "transform": [
+    {
+      "lookup": "State",
+      "from": {
+        "data": {
+          "url": "/AS2/data/malaysia-geomap.json",
+          "format": {"type": "topojson", "feature": "my"}
+        },
+        "key": "properties.name"
+      },
+      "as": "geo"
+    },
+    {"filter": "datum.Year == Year_selection"},
+    {"calculate": "datum['Number of Drug Addicts']", "as": "Number of Drug Addicts"},
+    {
+      "calculate": "(datum['Number of Drug Addicts'] / datum.Population) * 100000",
+      "as": "Drug Addicts per 100,000"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightblue"
+      },
+      "data": {
+        "sphere": true
+      }
+    },
+    {
+      "data": {
+        "graticule": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "mark": {"type": "geoshape", "stroke": "black"},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "Drug Addicts per 100,000",
+          "type": "quantitative",
+          "scale": {"scheme": "browns"},
+          "title": "Drug Addicts per 100,000 People"
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal", "title": "State"},  
+          {"field": "Number of Drug Addicts", "type": "quantitative"},
+          {"field": "Drug Addicts per 100,000", "type": "quantitative", "format": ".2f"},
+          {"field": "Year", "type": "quantitative"},
+          {"field": "Population", "type": "quantitative"}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Drug Addiction by Sex Over Time",
+    "width": 600,
+    "height": 400,
+    "data": {"url": "/AS2/data/drug-sex.csv"},
+    "mark": {"type": "area", "line": true, "point": true},
+    "encoding": {
+      "x": {
+        "field": "Year ",
+        "type": "temporal",
+        "axis": {"title": "Year"}
+      },
+      "y": {
+        "field": "Value",
+        "type": "quantitative",
+        "axis": {"title": "Number of Addicts"},
+        "stack": "zero"
+      },
+      "color": {
+        "field": "Sex",
+        "type": "nominal",
+        "scale": {"domain": ["Male", "Female"], "range": ["#1f77b4", "#e377c2"]},
+        "legend": {"title": "Sex"}
+      },
+      "opacity": {
+        "condition": {"param": "sex_selection", "value": 1},
+        "value": 0.2
+      },
+      "tooltip": [
+        {"field": "Year", "type": "temporal"},
+        {"field": "Sex", "type": "nominal"},
+        {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
+      ]
+    },
+    "params": [{
+      "name": "sex_selection",
+      "select": {"type": "point", "fields": ["Sex"]},
+      "bind": "legend"
+    }]
+  }

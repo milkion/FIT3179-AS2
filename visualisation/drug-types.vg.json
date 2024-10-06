@@ -4,7 +4,7 @@
   "width": 800,
   "height": 500,
   "data": {
-    "url": "drug-type.csv"
+    "url": "/AS2/data/drug-type.csv"
   },
   "params": [
     {
@@ -14,8 +14,13 @@
         "input": "select",
         "options": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
         "labels": ["2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
-        "name": "Select Year"
+        "name": "Select Year  "
       }
+    },
+    {
+      "name": "drug_selection",
+      "select": {"type": "point", "fields": ["Type of drug"]},
+      "bind": "legend"
     }
   ],
   "transform": [
@@ -32,12 +37,21 @@
       "axis": {"labelAngle": -45}
     },
     "y": {
-        "field": "Value",
-        "type": "quantitative",
-        "title": "Number of Addicts (Square Root Scale)",
-        "scale": {"type": "sqrt"},
-        "axis": {"tickCount": 5}
-      },
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Number of Addicts (Square Root Scale)",
+      "scale": {"type": "sqrt"},
+      "axis": {"tickCount": 5}
+    },
+    "color": {
+      "field": "Type of drug",
+      "type": "nominal",
+      "legend": {"title": "Drug Types"}
+    },
+    "opacity": {
+      "condition": {"param": "drug_selection", "value": 1},
+      "value": 0.2
+    },
     "tooltip": [
       {"field": "Type of drug", "type": "nominal"},
       {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}

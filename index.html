@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-    <script src="vega_lite_vis.js"></script>
+    <script src="js/vega_lite_vis.js"></script>
 
     <title>Week 10 Homework</title>
 
@@ -47,6 +47,34 @@
         </ul>
     </div>
 
+    <div class="chart-container">
+        <div id="drug_age_chart"></div>
+    </div>
+    <div class="annotation">
+        <h3>Drug Addicts by Age Group Over Time</h3>
+        <p>This line chart shows the number of drug addicts for different age groups over time. Key features:</p>
+        <ul>
+            <li>Each line represents a different age group.</li>
+            <li>The legend is interactive - click on age groups to show/hide them.</li>
+            <li>Hover over points to see detailed information for each year and age group.</li>
+            <li>Observe trends and compare different age groups across years.</li>
+        </ul>
+    </div>
+
+    <div class="chart-container">
+        <div id="drug_sex_chart"></div>
+    </div>
+    <div class="annotation">
+        <h3>Drug Addiction by Sex Over Time</h3>
+        <p>This area chart shows the number of drug addicts by sex over time. Key features:</p>
+        <ul>
+            <li>The chart uses stacked areas to represent male and female drug addicts.</li>
+            <li>The legend is interactive - click on sex categories to show/hide them.</li>
+            <li>Hover over points to see detailed information for each year and sex.</li>
+            <li>Observe trends and compare the number of male and female addicts across years.</li>
+        </ul>
+    </div>
+
     <script>
         vegaEmbed('#choropleth_map', vg_1).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -55,7 +83,16 @@
         vegaEmbed('#drug_types_chart', vg_2).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
+
+        vegaEmbed('#drug_age_chart', vg_3).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#drug_sex_chart', vg_4).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
     </script>
+
 </body>
 
 </html>
