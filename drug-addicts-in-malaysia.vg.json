@@ -22,14 +22,14 @@
     "center": [109.5, 4.3]
   },
   "data": {
-    "url": "../data/combined_drug_addicts_population.csv"
+    "url": "combined_drug_addicts_population.csv"
   },
   "transform": [
     {
       "lookup": "State",
       "from": {
         "data": {
-          "url": "../data/malaysia-geomap.json",
+          "url": "malaysia-geomap.json",
           "format": {"type": "topojson", "feature": "my"}
         },
         "key": "properties.name"

@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
+  "width": 1000,
   "height": 500,
   "data": {
-    "url": "../data/drug-type.csv"
+    "url": "./drug-type.csv"
   },
   "params": [
     {

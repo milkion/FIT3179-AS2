@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "../data/drug-sex.csv"},
+  "data": {"url": "drug-sex.csv"},
   "vconcat": [
     {
       "title": {"text": "Male", "fontSize": 16},
