@@ -1,41 +1,87 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Drug Addiction by Sex Over Time",
-    "width": 600,
-    "height": 400,
-    "data": {"url": "/AS2/data/drug-sex.csv"},
-    "mark": {"type": "area", "line": true, "point": true},
-    "encoding": {
-      "x": {
-        "field": "Year ",
-        "type": "temporal",
-        "axis": {"title": "Year"}
-      },
-      "y": {
-        "field": "Value",
-        "type": "quantitative",
-        "axis": {"title": "Number of Addicts"},
-        "stack": "zero"
-      },
-      "color": {
-        "field": "Sex",
-        "type": "nominal",
-        "scale": {"domain": ["Male", "Female"], "range": ["#1f77b4", "#e377c2"]},
-        "legend": {"title": "Sex"}
-      },
-      "opacity": {
-        "condition": {"param": "sex_selection", "value": 1},
-        "value": 0.2
-      },
-      "tooltip": [
-        {"field": "Year", "type": "temporal"},
-        {"field": "Sex", "type": "nominal"},
-        {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "/AS2/data/drug-sex.csv"},
+  "vconcat": [
+    {
+      "title": {"text": "Male", "fontSize": 16},
+      "width": "container",
+      "height": 300,
+      "transform": [{"filter": "datum.Sex == 'Male'"}],
+      "mark": {"type": "area", "line": true, "point": true},
+      "encoding": {
+        "x": {
+          "field": "Year ",
+          "type": "quantitative",
+          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14}
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {"title": "Number of Addicts", "labelFontSize": 12, "titleFontSize": 14}
+        },
+        "color": {"value": "#1f77b4"},
+        "tooltip": [
+          {"field": "Year ", "type": "quantitative", "title": "Year"},
+          {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
+        ]
+      }
     },
-    "params": [{
-      "name": "sex_selection",
-      "select": {"type": "point", "fields": ["Sex"]},
-      "bind": "legend"
-    }]
-  }
+    {
+      "title": {"text": "Female", "fontSize": 16},
+      "width": "container",
+      "height": 300,
+      "transform": [{"filter": "datum.Sex == 'Female'"}],
+      "mark": {"type": "area", "line": true, "point": true},
+      "encoding": {
+        "x": {
+          "field": "Year ",
+          "type": "quantitative",
+          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14}
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {"title": "Number of Addicts", "labelFontSize": 12, "titleFontSize": 14}
+        },
+        "color": {"value": "#e377c2"},
+        "tooltip": [
+          {"field": "Year ", "type": "quantitative", "title": "Year"},
+          {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
+        ]
+      }
+    },
+    {
+      "title": {"text": "Total", "fontSize": 16},
+      "width": "container",
+      "height": 300,
+      "transform": [
+        {
+          "aggregate": [{
+            "op": "sum",
+            "field": "Value",
+            "as": "TotalValue"
+          }],
+          "groupby": ["Year "]
+        }
+      ],
+      "mark": {"type": "area", "line": true, "point": true},
+      "encoding": {
+        "x": {
+          "field": "Year ",
+          "type": "quantitative",
+          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14}
+        },
+        "y": {
+          "field": "TotalValue",
+          "type": "quantitative",
+          "axis": {"title": "Total Number of Addicts", "labelFontSize": 12, "titleFontSize": 14}
+        },
+        "color": {"value": "#2ca02c"},
+        "tooltip": [
+          {"field": "Year ", "type": "quantitative", "title": "Year"},
+          {"field": "TotalValue", "type": "quantitative", "title": "Total Number of Addicts"}
+        ]
+      }
+    }
+  ]
+}

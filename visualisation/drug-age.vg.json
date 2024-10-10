@@ -1,44 +1,57 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Drug addicts by age group over time",
-    "data": {"url": "/AS2/data/drug-age.csv"},
-    "width": 600,
-    "height": 400,
-    "mark": {"type": "line", "point": true},
-    "params": [
-      {
-        "name": "age_group_selection",
-        "select": {"type": "point", "fields": ["Age group"]},
-        "bind": "legend"
-      }
-    ],
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "quantitative",
-        "axis": {"title": "Year"}
-      },
-      "y": {
-        "field": "Value",
-        "type": "quantitative",
-        "axis": {"title": "Number of Addicts"}
-      },
-      "color": {
-        "field": "Age group",
-        "type": "nominal",
-        "scale": {"scheme": "category10"}
-      },
-      "tooltip": [
-        {"field": "Year", "type": "quantitative"},
-        {"field": "Age group", "type": "nominal"},
-        {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Drug addicts by age group over time",
+  "data": {"url": "/AS2/data/drug-age.csv"},
+  "width": "container",
+  "height": 500,
+  "layer": [
+
+    {
+      "mark": {"type": "line", "point": true},
+      "params": [
+        {
+          "name": "age_group_selection",
+          "select": {"type": "point", "fields": ["Age group"]},
+          "bind": "legend"
+        }
       ],
-      "opacity": {
-        "condition": {"param": "age_group_selection", "value": 1},
-        "value": 0.2
-      }
-    },
-    "transform": [
-      {"filter": "datum['Age group'] != '0'"}
-    ]
-  }
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {"title": "Year"}
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {"title": "Number of Addicts"}
+        },
+        "color": {
+          "field": "Age group",
+          "type": "nominal",
+          "scale": {"scheme": "category10"},
+          "legend": {
+            "title": "Age Group",
+            "titleFontSize": 16,
+            "labelFontSize": 14,
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 8
+          }
+        },
+        "tooltip": [
+          {"field": "Year", "type": "quantitative"},
+          {"field": "Age group", "type": "nominal"},
+          {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
+        ],
+        "opacity": {
+          "condition": {"param": "age_group_selection", "value": 1},
+          "value": 0.2
+        }
+      },
+      "transform": [
+        {"filter": "datum['Age group'] != '0'"}
+      ]
+    }
+  ]
+}

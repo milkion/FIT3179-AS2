@@ -3,96 +3,78 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Drug Addiction in Malaysia (2000-2021)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="layout.css">
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-
     <script src="js/vega_lite_vis.js"></script>
-
-    <title>Week 10 Homework</title>
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Week 10 Homework</h1>
-    <p>Name: Jasmine Koh</p>
-    <p>Student ID: 33454876</p>
-    
-    <div class="chart-container">
-        <div id="choropleth_map"></div>
-    </div>
-    <div class="annotation">
-        <h3>Drug Addicts per 100,000 Population by State in Malaysia (2021)</h3>
-        <p>This choropleth map visualizes the distribution of drug addicts across Malaysian states. Darker shades indicate a higher number of drug addicts per 100,000 population. Key observations:</p>
+    <header class="landing-page">
+        <h1><i class="fas fa-chart-line"></i> Drug Addiction in Malaysia</h1>
+        <div class="description">
+            <p>Drug addiction in Malaysia has been a significant public health concern for decades. Despite stringent laws and ongoing efforts 
+                to combat drug abuse, the country continues to grapple with this complex issue. The data presented here offers a comprehensive 
+                look at the patterns and trends of drug addiction across different states, drug types, age groups, and genders from 2000 to 2021.
+            </p>
+            <p>Through this visualization, we aim to unravel the intricate story of drug addiction in Malaysia. Each section is designed to provide insights into the multifaceted nature of this issue, encouraging viewers to delve deeper into the data and understand the underlying factors contributing to these trends.</p>
+            <p style="text-align: center; font-weight: bold;">Click on the sections below to explore specific aspects of drug addiction in Malaysia.</p>
+        </div>
+    </header>
+
+    <nav id="sticky-nav">
         <ul>
-            <li>States with darker shades have a higher prevalence of drug addiction.</li>
-            <li>The map allows for quick identification of regions that may require more focused intervention programs.</li>
-            <li>Hover over each state to see specific numbers and rates.</li>
+            <li><a href="#choropleth_map_section">Map</a></li>
+            <li><a href="#drug_types_section">Drug Types</a></li>
+            <li><a href="#drug_age_section">Age Groups</a></li>
+            <li><a href="#drug_sex_section">Gender</a></li>
         </ul>
-    </div>
-    
-    <div class="chart-container">
-        <div id="drug_types_chart"></div>
-    </div>
-    <div class="annotation">
-        <h3>Number of Addicts by Drug Type</h3>
-        <p>This bar chart shows the number of addicts for different types of drugs. Important features:</p>
-        <ul>
-            <li>The chart uses a square root scale to better display both large and small values.</li>
-            <li>You can select different years using the dropdown menu to see how drug preferences have changed over time.</li>
-            <li>The drug types are sorted in descending order, making it easy to identify the most prevalent drugs.</li>
-        </ul>
-    </div>
+    </nav>
 
-    <div class="chart-container">
-        <div id="drug_age_chart"></div>
-    </div>
-    <div class="annotation">
-        <h3>Drug Addicts by Age Group Over Time</h3>
-        <p>This line chart shows the number of drug addicts for different age groups over time. Key features:</p>
-        <ul>
-            <li>Each line represents a different age group.</li>
-            <li>The legend is interactive - click on age groups to show/hide them.</li>
-            <li>Hover over points to see detailed information for each year and age group.</li>
-            <li>Observe trends and compare different age groups across years.</li>
-        </ul>
-    </div>
+    <main>
+        <section id="choropleth_map_section" class="visualization-section">
+            <h2><i class="fas fa-map-marked-alt"></i> Drug Addicts per 100,000 Population by State</h2>
+            <p class="description">Explore the distribution of drug addicts across Malaysian states from 2000 to 2021 using the interactive slider.</p>
+            <p>Each state tells a unique story of its battle against drug addiction. The map allows you to visualize the geographical spread and intensity of addiction, highlighting areas that require urgent attention and intervention. By interacting with the map, you can uncover patterns and correlations that might not be immediately apparent.</p>
+            <div id="choropleth_map" class="visualization"></div>
+        </section>
 
-    <div class="chart-container">
-        <div id="drug_sex_chart"></div>
-    </div>
-    <div class="annotation">
-        <h3>Drug Addiction by Sex Over Time</h3>
-        <p>This area chart shows the number of drug addicts by sex over time. Key features:</p>
-        <ul>
-            <li>The chart uses stacked areas to represent male and female drug addicts.</li>
-            <li>The legend is interactive - click on sex categories to show/hide them.</li>
-            <li>Hover over points to see detailed information for each year and sex.</li>
-            <li>Observe trends and compare the number of male and female addicts across years.</li>
-        </ul>
-    </div>
+        <div class="side-by-side-container">
+            <section id="drug_types_section" class="visualization-section">
+                <h2><i class="fas fa-pills"></i> Number of Addicts by Drug Type</h2>
+                <p class="description">Compare the prevalence of different drug types among addicts for each year.</p>
+                <p>This section delves into the diverse world of substances that have plagued communities. By examining the data, you can trace the rise and fall of various drug types, offering a glimpse into the changing landscape of addiction and the societal factors influencing these shifts.</p>
+                <div id="drug_types_chart" class="visualization"></div>
+            </section>
 
-    <script>
-        vegaEmbed('#choropleth_map', vg_1).then(function(result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
+            <section id="drug_age_section" class="visualization-section">
+                <h2><i class="fas fa-users"></i> Drug Addicts by Age Group Over Time</h2>
+                <p class="description">Analyze trends in drug addiction across various age groups throughout the years.</p>
+                <p>The age group analysis provides a poignant look at how addiction affects different generations. It reveals the vulnerability of youth and the resilience of older age groups, painting a picture of how societal changes impact different demographics over time.</p>
+                <div id="drug_age_chart" class="visualization"></div>
+            </section>
+        </div>
 
-        vegaEmbed('#drug_types_chart', vg_2).then(function(result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
+        <section id="drug_sex_section" class="visualization-section">
+            <h2><i class="fas fa-venus-mars"></i> Drug Addiction by Sex Over Time</h2>
+            <p class="description">Compare drug addiction trends between males and females, along with the total number of addicts.</p>
+            <p>Gender dynamics play a crucial role in understanding addiction. This section highlights the disparities and similarities in addiction trends between males and females, offering insights into gender-specific challenges and the need for tailored intervention strategies.</p>
+            <div id="drug_sex_chart" class="visualization"></div>
+        </section>
+    </main>
 
-        vegaEmbed('#drug_age_chart', vg_3).then(function(result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#drug_sex_chart', vg_4).then(function(result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-    </script>
-
+    <footer>
+        <p>Jasmine Koh | Student ID: 33454876</p>
+        <p>Data Source: https://archive.data.gov.my/</p>
+    </footer>
 </body>
 
 </html>
