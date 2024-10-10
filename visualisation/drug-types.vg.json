@@ -3,7 +3,7 @@
   "width": "container",
   "height": 500,
   "data": {
-    "url": "/AS2/data/drug-type.csv"
+    "url": "../data/drug-type.csv"
   },
   "params": [
     {
