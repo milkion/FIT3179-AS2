@@ -21,12 +21,7 @@
     <header class="landing-page">
         <h1><i class="fas fa-chart-line"></i> Drug Addiction in Malaysia</h1>
         <div class="description">
-            <p>Drug addiction in Malaysia has been a significant public health concern for decades. Despite stringent laws and ongoing efforts 
-                to combat drug abuse, the country continues to grapple with this complex issue. The data presented here offers a comprehensive 
-                look at the patterns and trends of drug addiction across different states, drug types, age groups, and genders from 2000 to 2021.
-            </p>
-            <p>Through this visualization, we aim to unravel the intricate story of drug addiction in Malaysia. Each section is designed to provide insights into the multifaceted nature of this issue, encouraging viewers to delve deeper into the data and understand the underlying factors contributing to these trends.</p>
-            <p style="text-align: center; font-weight: bold;">Click on the sections below to explore specific aspects of drug addiction in Malaysia.</p>
+            <p>This visualization presents trends in drug addiction in Malaysia from <i>2000</i> to <i>2021</i>, highlighting changes in case numbers, drug types, and demographics. It provides an overview of the evolving drug abuse landscape and its potential connections to social and policy shifts during this period.
         </div>
     </header>
 
@@ -42,38 +37,47 @@
     <main>
         <section id="choropleth_map_section" class="visualization-section">
             <h2><i class="fas fa-map-marked-alt"></i> Drug Addicts per 100,000 Population by State</h2>
-            <p class="description">Explore the distribution of drug addicts across Malaysian states from 2000 to 2021 using the interactive slider.</p>
-            <p>Each state tells a unique story of its battle against drug addiction. The map allows you to visualize the geographical spread and intensity of addiction, highlighting areas that require urgent attention and intervention. By interacting with the map, you can uncover patterns and correlations that might not be immediately apparent.</p>
+            <p class="description">This choropleth map visualizes the number of drug addicts per 100,000 people across Malaysia. Use the slider to explore data for different years from <i>2000</i> to <i>2021</i>. 
+                States with the 
+                highest and lowest values are highlighted with text annotations, allowing for easy comparison of the <b>most</b> and <b>least</b> affected regions over time.</p>
             <div id="choropleth_map" class="visualization"></div>
         </section>
 
         <div class="side-by-side-container">
             <section id="drug_types_section" class="visualization-section">
                 <h2><i class="fas fa-pills"></i> Number of Addicts by Drug Type</h2>
-                <p class="description">Compare the prevalence of different drug types among addicts for each year.</p>
-                <p>This section delves into the diverse world of substances that have plagued communities. By examining the data, you can trace the rise and fall of various drug types, offering a glimpse into the changing landscape of addiction and the societal factors influencing these shifts.</p>
+                <p class="description">This bar chart displays the number of drug addicts by drug type in Malaysia. <b>Heroin</b> and <b>Morphine</b> were the most commonly used drugs until <i>2012</i>. 
+                    Afterward, a shift occurred due to changes in drug trafficking routes and the rise of synthetic drugs, leading to a surge in <b>Opiate</b> and <b>Methamphetamine</b> use.</p>
                 <div id="drug_types_chart" class="visualization"></div>
             </section>
 
             <section id="drug_age_section" class="visualization-section">
                 <h2><i class="fas fa-users"></i> Drug Addicts by Age Group Over Time</h2>
-                <p class="description">Analyze trends in drug addiction across various age groups throughout the years.</p>
-                <p>The age group analysis provides a poignant look at how addiction affects different generations. It reveals the vulnerability of youth and the resilience of older age groups, painting a picture of how societal changes impact different demographics over time.</p>
+                <p class="description">This stacked line chart shows drug addicts by age group between <i>2000</i> to <i>2019</i>. By default, it highlights the <b>40 and above</b> age group, which consistently shows the highest 
+                    numbers, while the <b>below 13</b> age group has the lowest values. Users can select different age groups from the dropdown menu to view specific trends for each group.</p>
                 <div id="drug_age_chart" class="visualization"></div>
             </section>
         </div>
 
         <section id="drug_sex_section" class="visualization-section">
             <h2><i class="fas fa-venus-mars"></i> Drug Addiction by Sex Over Time</h2>
-            <p class="description">Compare drug addiction trends between males and females, along with the total number of addicts.</p>
-            <p>Gender dynamics play a crucial role in understanding addiction. This section highlights the disparities and similarities in addiction trends between males and females, offering insights into gender-specific challenges and the need for tailored intervention strategies.</p>
+            <p class="description">This area chart illustrates drug addiction by sex between <i></i>2000</i> to <i>2019</i>, showing that males consistently dominate the number of addicts. 
+                On average, about <i>1 in 6</i> drug users are <b>female</b>, highlighting a significant gender disparity in addiction rates.</p>
             <div id="drug_sex_chart" class="visualization"></div>
         </section>
     </main>
 
     <footer>
-        <p>Jasmine Koh | Student ID: 33454876</p>
-        <p>Data Source: https://archive.data.gov.my/</p>
+        <p>Designed by Jasmine Koh</p>
+        <ul>
+            <li>Data Source: Data@DOSM - March 2021</li>
+            <ul>
+                <li><a href="https://archive.data.gov.my/data/ms_MY/dataset/number-of-addicts-by-type-of-drugs-malaysia">Number Of Addicts By Type Of Drugs, Malaysia</a></li>
+                <li><a href="https://archive.data.gov.my/data/ms_MY/dataset/number-of-drug-addicts-by-age-group-malaysia">Number Of Drug Addicts By Age Group, Malaysia</a></li>
+                <li><a href="https://archive.data.gov.my/data/ms_MY/dataset/number-of-drug-addicts-by-state-malaysia">Number Of Drug Addicts By State, Malaysia</a></li>
+                <li><a href="https://archive.data.gov.my/data/ms_MY/dataset/number-of-drug-addicts-by-state-malaysia">Number Of Drug Addicts By Sex, Malaysia</a></li>
+            </ul>
+        </ul>
     </footer>
 </body>
 

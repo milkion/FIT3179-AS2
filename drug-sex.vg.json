@@ -12,16 +12,16 @@
         "x": {
           "field": "Year ",
           "type": "quantitative",
-          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14}
+          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14, "format": "d"}
         },
         "y": {
           "field": "Value",
           "type": "quantitative",
           "axis": {"title": "Number of Addicts", "labelFontSize": 12, "titleFontSize": 14}
         },
-        "color": {"value": "#1f77b4"},
+        "color": {"value": "#0072B2"},
         "tooltip": [
-          {"field": "Year ", "type": "quantitative", "title": "Year"},
+          {"field": "Year ", "type": "quantitative", "title": "Year", "format": "d"},
           {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
         ]
       }
@@ -36,16 +36,16 @@
         "x": {
           "field": "Year ",
           "type": "quantitative",
-          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14}
+          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14, "format": "d"}
         },
         "y": {
           "field": "Value",
           "type": "quantitative",
           "axis": {"title": "Number of Addicts", "labelFontSize": 12, "titleFontSize": 14}
         },
-        "color": {"value": "#e377c2"},
+        "color": {"value": "#D55E00"},
         "tooltip": [
-          {"field": "Year ", "type": "quantitative", "title": "Year"},
+          {"field": "Year ", "type": "quantitative", "title": "Year", "format": "d"},
           {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
         ]
       }
@@ -69,16 +69,16 @@
         "x": {
           "field": "Year ",
           "type": "quantitative",
-          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14}
+          "axis": {"title": "Year", "labelFontSize": 12, "titleFontSize": 14, "format": "d"}
         },
         "y": {
           "field": "TotalValue",
           "type": "quantitative",
           "axis": {"title": "Total Number of Addicts", "labelFontSize": 12, "titleFontSize": 14}
         },
-        "color": {"value": "#2ca02c"},
+        "color": {"value": "#009E73"},
         "tooltip": [
-          {"field": "Year ", "type": "quantitative", "title": "Year"},
+          {"field": "Year ", "type": "quantitative", "title": "Year", "format": "d"},
           {"field": "TotalValue", "type": "quantitative", "title": "Total Number of Addicts"}
         ]
       }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1000,
+  "width": 1100,
   "height": 500,
   "data": {
     "url": "./drug-type.csv"
@@ -25,7 +25,8 @@
   ],
   "transform": [
     {"filter": "datum.Year == year_select"},
-    {"filter": "datum.Value != '-'"}
+    {"filter": "datum.Value != '-'"},
+    {"filter": "datum.Value > 0.1"}
   ],
   "mark": "bar",
   "encoding": {
@@ -33,25 +34,34 @@
       "field": "Type of drug",
       "type": "nominal",
       "title": "Drug Type",
-      "axis": {"labelAngle": -45}
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      }
     },
     "y": {
       "field": "Value",
       "type": "quantitative",
       "title": "Number of Addicts (Square Root Scale)",
       "scale": {"type": "sqrt"},
-      "axis": {"tickCount": 5}
+      "axis": {
+        "tickCount": 5,
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      }
     },
     "color": {
       "field": "Type of drug",
       "type": "nominal",
+      "scale": {"scheme": "tableau20"},
       "legend": {
         "title": "Drug Types",
-        "titleFontSize": 14,
-        "labelFontSize": 14,
+        "titleFontSize": 16,
+        "labelFontSize": 15,
         "orient": "bottom",
         "direction": "horizontal",
-        "columns": 8
+        "columns": 10
       }
     },
     "opacity": {

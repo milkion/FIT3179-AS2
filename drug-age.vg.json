@@ -2,24 +2,48 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Drug addicts by age group over time",
   "data": {"url": "drug-age.csv"},
-  "width": "container",
+  "width": 1100,
   "height": 500,
+  "params": [
+    {
+      "name": "age_group_select",
+      "value": "Upper 40",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Below 13",
+          "13 - 15",
+          "16 - 19",
+          "20 - 24",
+          "30 - 34",
+          "35 - 39",
+          "Upper 40"
+        ],
+        "labels": [
+          "Below 13",
+          "13 - 15",
+          "16 - 19",
+          "20 - 24",
+          "30 - 34",
+          "35 - 39",
+          "Upper 40"
+        ],
+        "name": "Select Age Group : "
+      }
+    }
+  ],
   "layer": [
-
     {
       "mark": {"type": "line", "point": true},
-      "params": [
-        {
-          "name": "age_group_selection",
-          "select": {"type": "point", "fields": ["Age group"]},
-          "bind": "legend"
-        }
-      ],
       "encoding": {
         "x": {
           "field": "Year",
           "type": "quantitative",
-          "axis": {"title": "Year"}
+          "axis": {
+            "title": "Year",
+            "grid": false,
+            "format": "d"
+          }
         },
         "y": {
           "field": "Value",
@@ -29,29 +53,58 @@
         "color": {
           "field": "Age group",
           "type": "nominal",
-          "scale": {"scheme": "category10"},
+          "scale": {"scheme": "category20"},
           "legend": {
-            "title": "Age Group",
-            "titleFontSize": 16,
-            "labelFontSize": 14,
             "orient": "bottom",
             "direction": "horizontal",
-            "columns": 8
+            "titleFontSize": 16,
+            "labelFontSize": 15
           }
         },
         "tooltip": [
-          {"field": "Year", "type": "quantitative"},
+          {"field": "Year", "type": "quantitative", "format": "d"},
           {"field": "Age group", "type": "nominal"},
           {"field": "Value", "type": "quantitative", "title": "Number of Addicts"}
         ],
         "opacity": {
-          "condition": {"param": "age_group_selection", "value": 1},
-          "value": 0.2
+          "condition": {
+            "test": "datum['Age group'] === age_group_select",
+            "value": 1
+          },
+          "value": 0.3
+        },
+        "size": {
+          "condition": {
+            "test": "datum['Age group'] === age_group_select",
+            "value": 3
+          },
+          "value": 1
         }
       },
       "transform": [
         {"filter": "datum['Age group'] != '0'"}
       ]
+    },
+    {
+      "mark": {"type": "rule", "color": "darkblue"},
+      "encoding": {
+        "x": {"datum": 2003}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": 10,
+        "fontSize": 13,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": {"datum": 2003},
+        "y": {"value": 0},
+        "text": {"value": "National Anti-Drug Policy launched"}
+      }
     }
   ]
 }

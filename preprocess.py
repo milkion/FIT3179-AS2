@@ -1,29 +1,35 @@
 import pandas as pd
 
-# Read the CSV files
-population_df = pd.read_csv('AS2/data/state_population.csv')
-drug_addicts_df = pd.read_csv('AS2/data/drug-addicts-by-state.csv')
+# Load your datasets
+state_population = pd.read_csv('./state_population.csv')
+drug_addicts = pd.read_csv('./drug-addicts-by-state.csv')
 
-# Ensure 'Year' is treated as an integer in both dataframes
-population_df['Year'] = population_df['Year'].astype(int)
-drug_addicts_df['Year'] = drug_addicts_df['Year'].astype(int)
+# Filter data for years 2000 to 2021
+state_population = state_population[(state_population['Year'] >= 2000) & (state_population['Year'] <= 2021)]
+drug_addicts = drug_addicts[(drug_addicts['Year'] >= 2000) & (drug_addicts['Year'] <= 2021)]
 
-# Merge the dataframes on 'State' and 'Year'
-merged_df = pd.merge(drug_addicts_df, population_df, on=['State', 'Year'], how='inner')
+# Assuming both datasets have 'State' and 'Year' columns
+# Perform an outer merge to include all states from both datasets
+merged_data = pd.merge(state_population, drug_addicts[['State', 'Year', 'Value']], 
+                       on=['State', 'Year'], how='outer')
+
+# Fill NaN values in the Population column with 0 and convert to integer
+merged_data['Population'] = merged_data['Population'].fillna(0).astype(int)
+
+# Fill NaN values in the Value column with 0 and convert to integer
+merged_data['Value'] = merged_data['Value'].fillna(0).astype(int)
 
 # Rename the 'Value' column to 'Number of Drug Addicts'
-merged_df = merged_df.rename(columns={'Value': 'Number of Drug Addicts'})
+merged_data = merged_data.rename(columns={'Value': 'Number of Drug Addicts'})
 
-# Select and reorder the columns
-result_df = merged_df[['Year', 'State', 'Number of Drug Addicts', 'Population']]
+# Sort the data if needed
+merged_data = merged_data.sort_values(['Year', 'State'])
 
-# Sort the dataframe by Year and State
-result_df = result_df.sort_values(['Year', 'State'])
+# Reset the index
+merged_data = merged_data.reset_index(drop=True)
 
-# Ensure 'Number of Drug Addicts' is an integer
-result_df['Number of Drug Addicts'] = result_df['Number of Drug Addicts'].astype(int)
+# Reorder columns
+merged_data = merged_data[['Year', 'State', 'Number of Drug Addicts', 'Population']]
 
-# Write the result to a new CSV file
-result_df.to_csv('AS2/data/combined_drug_addicts_population.csv', index=False)
-
-print("Data processing complete. Output saved to 'AS2/data/combined_drug_addicts_population.csv'")
+# Save the result
+merged_data.to_csv('combined_drug_addicts_population1.csv', index=False)
