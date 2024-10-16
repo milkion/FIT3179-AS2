@@ -53,7 +53,7 @@
         "color": {
           "field": "Age group",
           "type": "nominal",
-          "scale": {"scheme": "category20"},
+          "scale": {"scheme": "tableau20"},
           "legend": {
             "orient": "bottom",
             "direction": "horizontal",
